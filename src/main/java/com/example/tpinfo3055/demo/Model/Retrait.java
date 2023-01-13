@@ -1,6 +1,6 @@
 package com.example.tpinfo3055.demo.Model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,24 +24,24 @@ public class Retrait {
     private User valideur;
 
     @Column(name="date_arriver")
-    private Date dateArriver;
+    private LocalDateTime dateArriver;
 
     @Column(name="date_retrait")
-    private Date dateRetrait;
+    private LocalDateTime dateRetrait;
 
     
 
     public Retrait() {
     }
 
-    public Retrait(Colis colis, User valideur, Date dateArriver, Date dateRetrait) {
+    public Retrait(Colis colis, User valideur, LocalDateTime dateArriver, LocalDateTime dateRetrait) {
         this.colis = colis;
         this.valideur = valideur;
         this.dateArriver = dateArriver;
         this.dateRetrait = dateRetrait;
     }
 
-    public Retrait(long id, Colis colis, User valideur, Date dateArriver, Date dateRetrait) {
+    public Retrait(long id, Colis colis, User valideur, LocalDateTime dateArriver, LocalDateTime dateRetrait) {
         this.id = id;
         this.colis = colis;
         this.valideur = valideur;
@@ -73,19 +73,19 @@ public class Retrait {
         this.valideur = valideur;
     }
 
-    public Date getDateArriver() {
+    public LocalDateTime getDateArriver() {
         return dateArriver;
     }
 
-    public void setDateArriver(Date dateArriver) {
+    public void setDateArriver(LocalDateTime dateArriver) {
         this.dateArriver = dateArriver;
     }
 
-    public Date getDateRetrait() {
+    public LocalDateTime getDateRetrait() {
         return dateRetrait;
     }
 
-    public void setDateRetrait(Date dateRetrait) {
+    public void setDateRetrait(LocalDateTime dateRetrait) {
         this.dateRetrait = dateRetrait;
     }
 
